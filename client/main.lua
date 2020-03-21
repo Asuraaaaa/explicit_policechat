@@ -27,7 +27,7 @@ end)
 
 
 Citizen.CreateThread(function()
-	while true do
+  while true do
     Citizen.Wait(1)
     
     if ESX.PlayerData.job and ESX.PlayerData.job.name == 'police' then
@@ -38,13 +38,13 @@ Citizen.CreateThread(function()
           
         if Config.Type ~= -1 and distance < Config.DrawDistance then  
         DrawMarker(Config.Type, v.x, v.y, v.z-0.95, 0, 0, 0.1, 0, 0, 0, 1.0, 1.0, 1.0, 0, 128, 255, 200, 0, 0, 0, 0)
-          Draw3dtext(v.x, v.y, v.z, '[~g~E~w~] för att använda ~b~polis datorn')
+          Draw3dtext(v.x, v.y, v.z+0.12, '[~g~E~w~] för att använda ~b~polis datorn')
           if IsControlPressed(0, 38) then
-            playAnim('missheist_jewel@hacking', 'hack_loop')
-            OpenMenu()
-          end
+             playAnim('missheist_jewel@hacking', 'hack_loop')
+             OpenMenu()
+           end
         end
-			end
-		end
-	end
+      end
+    end
+  end
 end)
