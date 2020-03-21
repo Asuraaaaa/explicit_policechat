@@ -1,5 +1,3 @@
--- Explicit 2020
-
 ESX   = nil
 
 Citizen.CreateThread(function()
